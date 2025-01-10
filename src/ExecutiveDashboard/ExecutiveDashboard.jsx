@@ -1,6 +1,8 @@
 import React from 'react'
 import { Info, FileSpreadsheet, Network, KeySquare } from 'lucide-react'
 import HeaderExecutive from './HeaderExecutive'
+import FinancialChart from './FinancialOverview';
+import KeyDomain from './KeyDomain';
 
 const ExecutiveDashboard = () => {
   const percentage = 75; // Declare variables with const or let
@@ -8,10 +10,12 @@ const ExecutiveDashboard = () => {
   const arcWidth = 30;
   return (
     <div>
-      <HeaderExecutive />
-      <div className='px-8'>
-        <div className='flex pt-4'>
-          <div className="flex flex-col bg-white border-2 border-grey-500 rounded-2xl p-2 flex items-center h-80 w-96 shadow-md"
+       <div>
+        <HeaderExecutive />
+       </div>
+      <div className='px-8 h-screen overflow-y-auto'>
+        <div className='flex pt-4 '>
+          <div className="flex flex-col bg-white border-2 border-grey-500 rounded-2xl p-2 items-center h-82 w-96 shadow-md"
           style={{flexShrink: 1 }}>
             <div className="flex justify-between w-full">
               <span className="text-gray-700 pl-4 text-lg">Overall Readiness Score</span>
@@ -168,7 +172,7 @@ const ExecutiveDashboard = () => {
           {/* Third card */}
 
           <div className='flex pl-6'>
-            <div className="flex flex-col bg-white border-2 border-grey-500 rounded-2xl p-2 flex items-center h-80 shadow-md" 
+            <div className="flex flex-col bg-white border-2 border-grey-500 rounded-2xl p-2 flex items-center h-82 shadow-md" 
               style={{ width: '520px' }}>
                 <div className="flex justify-between w-full">
                   <span className="text-gray-700 pl-4 text-lg">Key Risk and Mitigations</span>
@@ -237,6 +241,19 @@ const ExecutiveDashboard = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className='flex pt-12'>
+          <div>
+            <FinancialChart />
+          </div>
+          <div>
+            <KeyDomain />
+          </div>
+        </div>
+
+        <div className='flex pt-12'>
+          
         </div>
       </div>
     </div>
