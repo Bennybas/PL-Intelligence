@@ -7,7 +7,7 @@ const Header = () => {
       <header className="bg-white text-gray-600 flex items-center justify-between px-6 py-3 border-b border-gray-200 shadow-md">
         {/* Logo Section */}
         <img
-          src="/teams_bg_d7_1-removebg.png"
+          src="/chryselys.png"
           alt="Logo"
           className="h-16 w-auto"
         />

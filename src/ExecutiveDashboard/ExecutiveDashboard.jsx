@@ -5,7 +5,7 @@ import FinancialChart from './FinancialOverview';
 import KeyDomain from './KeyDomain';
 
 const ExecutiveDashboard = () => {
-  const percentage = 75; // Declare variables with const or let
+  const percentage = 75; 
   const outerRadius = 80;
   const arcWidth = 30;
   return (
@@ -33,14 +33,14 @@ const ExecutiveDashboard = () => {
                   strokeWidth={arcWidth}
                 />
                 
-                {/* Green Progress Bar with increased size and shadow */}
+                {/* Gold Progress Bar with increased size and shadow */}
                 <path
                   d={`M 100,20
                       A 80 80 0 ${percentage > 50 ? 1 : 0} 1 
                       ${100 + 80 * Math.sin(2 * Math.PI * (percentage / 100))} 
                       ${100 - 80 * Math.cos(2 * Math.PI * (percentage / 100))}`}
                   fill="none"
-                  stroke="#558a41"
+                  stroke="#c98b27"
                   strokeWidth={arcWidth + 15} // Increased stroke width for the green progress bar
                   filter="url(#shadow)" // Add shadow
                 />
@@ -99,14 +99,14 @@ const ExecutiveDashboard = () => {
                   <svg width="140" height="40" viewBox="0 0 140 40">
                     <defs>
                       <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
-                        <stop offset="0%" stopColor="#22c55e" stopOpacity="0.2" />
-                        <stop offset="100%" stopColor="#22c55e" stopOpacity="0" />
+                        <stop offset="0%" stopColor="#c98b27" stopOpacity="0.2" />
+                        <stop offset="100%" stopColor="#c98b27" stopOpacity="0" />
                       </linearGradient>
                     </defs>
                     <path
                       d="M 0,25 C 10,28 20,22 30,24 S 50,28 60,25 S 80,22 90,24 S 110,28 120,25 S 130,22 140,24"
                       fill="none"
-                      stroke="#22c55e"
+                      stroke="#c98b27"
                       strokeWidth="2"
                     />
                     <path
@@ -197,7 +197,7 @@ const ExecutiveDashboard = () => {
                 <div className="flex gap-4">
                   <div className="flex-shrink-0">
                     <div className="w-10 h-10 flex items-center justify-center">
-                      <FileSpreadsheet className="w-5 h-5 text-green-700" />
+                      <FileSpreadsheet className="w-5 h-5 text-[#c98b27]" />
                     </div>
                   </div>
                   <div className="flex-1">
@@ -212,7 +212,7 @@ const ExecutiveDashboard = () => {
                 <div className="flex gap-4">
                   <div className="flex-shrink-0">
                     <div className="w-10 h-10 flex items-center justify-center">
-                      <Network className="w-5 h-5 text-green-700" />
+                      <Network className="w-5 h-5 text-[#c98b27]" />
                     </div>
                   </div>
                   <div className="flex-1">
@@ -227,7 +227,7 @@ const ExecutiveDashboard = () => {
                 <div className="flex gap-4">
                   <div className="flex-shrink-0">
                     <div className="w-10 h-10 flex items-center justify-center">
-                      <KeySquare className="w-5 h-5 text-green-700 text-lg" />
+                      <KeySquare className="w-5 h-5 text-[#c98b27] text-lg" />
                     </div>
                   </div>
                   <div className="flex-1">
@@ -253,7 +253,7 @@ const ExecutiveDashboard = () => {
         </div>
 
         <div className='flex pt-12'>
-          
+
         </div>
       </div>
     </div>

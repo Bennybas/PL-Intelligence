@@ -26,23 +26,24 @@ const KeyDomain = () => {
             </div>
             <div className='bg-white p-2'>
                 {[
-                    { title: 'Regulatory Readiness', color: 'red' },
-                    { title: 'Manufacturing and Supply Chain', color: 'yellow' },
-                    { title: 'Marketing Access', color: 'red' },
-                    { title: 'Sales Force and Recruitment Training', color: 'green' },
-                    { title: 'Kol Engagement', color: 'yellow' }
+                    { title: 'Regulatory Readiness', color: '#ed3939' },
+                    { title: 'Manufacturing and Supply Chain', color: '#eddd28' },
+                    { title: 'Marketing Access', color: '#ed3939' },
+                    { title: 'Sales Force and Recruitment Training', color: '#0aa311' },
+                    { title: 'Kol Engagement', color: '#faf734' }
                 ].map((item, index) => (
                     <div key={index}>
                     <div className="flex flex-row items-center w-full p-4 -ml-4 mb-2">
-                        <div className={`w-4 h-4 rounded-full border-4 border-${item.color}-600 bg-white mr-4`}></div>
+                        <div
+                        className="w-4 h-4 rounded-full border-4 bg-white mr-4"
+                        style={{ borderColor: item.color }}
+                        ></div>
                         <h3 className="text-gray-700 font-medium text-lg">{item.title}</h3>
                     </div>
                     <div className="h-px w-[450px] bg-gray-300"></div>
                     </div>
                 ))}
             </div>
-            
-            
 
         </div>
     </div>

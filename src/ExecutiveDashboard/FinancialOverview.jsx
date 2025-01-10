@@ -23,8 +23,8 @@ const FinancialChart = () => {
         { date: 'Dec 25', sales: 95, marketShare: 95 }
       ],
       lines: [
-        { key: 'sales', color: '#22c55e', label: 'Sales' },
-        { key: 'marketShare', color: '#3b82f6', label: 'Market Share' }
+        { key: 'sales', color: '#004567', label: 'Sales' },
+        { key: 'marketShare', color: '#c98b27', label: 'Market Share' }
       ],
       showMetrics: true
     },
@@ -44,25 +44,32 @@ const FinancialChart = () => {
         { date: 'Dec 25', competitor1: 18, competitor2: 50, competitor3: 32 }
       ],
       lines: [
-        { key: 'competitor1', color: '#3b82f6', label: 'Competitor 1' },
-        { key: 'competitor2', color: '#22c55e', label: 'Competitor 2' },
-        { key: 'competitor3', color: '#a855f7', label: 'Competitor 3' }
+        { key: 'competitor1', color: '#c98b27', label: 'Competitor 1' },
+        { key: 'competitor2', color: '#004567', label: 'Competitor 2' },
+        { key: 'competitor3', color: '#004567', label: 'Competitor 3' }
       ],
       showMetrics: true
     },
     'Global Overview': {
-      data: [
-        { region: 'North America', revenue: 1200, growth: 5.6, marketShare: 40 },
-        { region: 'Europe', revenue: 950, growth: 4.2, marketShare: 30 },
-        { region: 'Asia-Pacific', revenue: 800, growth: 7.8, marketShare: 20 },
-        { region: 'Latin America', revenue: 450, growth: 6.3, marketShare: 7 },
-        { region: 'Middle East & Africa', revenue: 300, growth: 5.1, marketShare: 3 }
-      ],
-      lines: [
-        { key: 'revenue', color: '#3b82f6', label: 'Revenue ($M)' },
-        { key: 'growth', color: '#22c55e', label: 'Growth (%)' },
-        { key: 'marketShare', color: '#a855f7', label: 'Market Share (%)' }
-      ],
+        data: [
+          { date: 'Jan 25', US: 0, EU: null, APAC: null },
+          { date: 'Feb 25', US: 11, EU: null, APAC: null },
+          { date: 'Mar 25', US: 10, EU: null, APAC: null },
+          { date: 'Apr 25', US: 13, EU: null, APAC: null },
+          { date: 'May 25', US: 16, EU: null, APAC: null },
+          { date: 'Jun 25', US: 30, EU: 0, APAC: 0 },
+          { date: 'Jul 25', US: 30, EU: 5, APAC: 1 },
+          { date: 'Aug 25', US: 31, EU: 15, APAC: 2 },
+          { date: 'Sep 25', US: 37, EU: 20, APAC: 3 },
+          { date: 'Oct 25', US: 41, EU: 25, APAC: 5 },
+          { date: 'Nov 25', US: 50, EU: 26, APAC: 9 },
+          { date: 'Dec 25', US: 57, EU: 27, APAC: 13 },
+        ],
+        lines: [
+          { key: 'US', color: '#c98b27', label: 'US Revenue ($M)' },
+          { key: 'EU', color: '#004567', label: 'EU Revenue ($M)' },
+          { key: 'APAC', color: '#87ceeb', label: 'APAC Revenue ($M)' }
+        ],
       showMetrics: true
     },
     'Market Access': {
@@ -84,8 +91,8 @@ const FinancialChart = () => {
             onClick={() => setActiveTab(tab)}
             className={`px-4 py-4 border-2 border-grey-500 rounded-2xl ${
               activeTab === tab 
-                ? 'bg-green-50 text-[#558a41] shadow-md' 
-                : 'bg-white text-gray-600 shadow-sm'
+                ? 'bg-gradient-to-br from-[#c98b27]/75 to-[#c98b27]/90 text-[#004567] shadow-md' 
+                : 'bg-gradient-to-br from-[#fcfbf7]/50 to-[#c98b27]/70 text-gray-600 shadow-sm'
             }`}
           >
             {tab}

@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowBigLeft, ArrowBigDownDash } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-const HeaderExecutive = () => {
+const HeaderGlobal = () => {
 const navigate = useNavigate();
   return (
     <div className='px-8'> 
@@ -23,7 +23,7 @@ const navigate = useNavigate();
               className="text-lg font-large "
               style={{ fontFamily: 'Roboto, sans-serif', color: '#004567', fontSize:'19px' }}
             >
-              Executive Launch Dashboard
+              Global Launch Readiness Dashboard
             </span>
           </div>
         </div>
@@ -53,4 +53,4 @@ const navigate = useNavigate();
   );
 };
 
-export default HeaderExecutive;
+export default HeaderGlobal;
