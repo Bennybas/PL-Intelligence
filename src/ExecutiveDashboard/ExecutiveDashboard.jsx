@@ -3,20 +3,23 @@ import { Info, FileSpreadsheet, Network, KeySquare } from 'lucide-react'
 import HeaderExecutive from './HeaderExecutive'
 
 const ExecutiveDashboard = () => {
-  const percentage = 75; // Declare variables with const or let
+  const percentage = 75; 
   const outerRadius = 80;
   const arcWidth = 30;
   return (
     <div>
       <HeaderExecutive />
-      <div className='px-8'>
-        <div className='flex pt-4 overflow'>
-          <div className="flex flex-col bg-white border-2 border-grey-500 rounded-2xl p-2 flex items-center h-80 w-96 shadow-md">
+      <div className='h-screen px-8 overflow-x-hidden'>
+        <div className='flex justify-between gap-1 pt-4'>
+          <div className="flex flex-col bg-white border-2 border-grey-500 rounded-2xl p-2 items-center h-80 shadow-md"
+            style={{ width: '460px', flexShrink: 0 }}>
             <div className="flex justify-between w-full">
               <span className="text-gray-700 pl-4 text-lg">Overall Readiness Score</span>
               <Info className='w-4 h-4'/>
             </div>
-            <div className="flex justify-center items-center ustify-between pt-8">
+
+            {/* CircularBar */}
+            <div className="flex justify-center items-center justify-between pt-8">
             <svg viewBox="-10 -10 220 220" width="220" height="220">
                 {/* Grey Circle */}
                 <circle 
@@ -28,7 +31,7 @@ const ExecutiveDashboard = () => {
                   strokeWidth={arcWidth}
                 />
                 
-                {/* Green Progress Bar with increased size and shadow */}
+                {/* Green Progress Bar */}
                 <path
                   d={`M 100,20
                       A 80 80 0 ${percentage > 50 ? 1 : 0} 1 
@@ -36,24 +39,23 @@ const ExecutiveDashboard = () => {
                       ${100 - 80 * Math.cos(2 * Math.PI * (percentage / 100))}`}
                   fill="none"
                   stroke="#558a41"
-                  strokeWidth={arcWidth + 15} // Increased stroke width for the green progress bar
-                  filter="url(#shadow)" // Add shadow
+                  strokeWidth={arcWidth + 15} 
+                  filter="url(#shadow)" 
                 />
 
                 {/* Percentage text */}
                 <text
                   x="100"
-                  y="100" // Adjusted y position for perfect centering
+                  y="100" 
                   textAnchor="middle"
                   fill="#000000"
-                  fontSize="33" // Increased font size for better visibility
+                  fontSize="33"
                   fontWeight="bold"
-                  dominantBaseline="middle" // Ensures text is vertically centered
+                  dominantBaseline="middle" 
                 >
                   {percentage}%
                 </text>
-
-                {/* Define the shadow filter */}
+                
                 <defs>
                   <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
                     <feDropShadow dx="1" dy="1" stdDeviation="1" flood-color="rgba(0, 0, 0, 0.2)" />
@@ -62,81 +64,82 @@ const ExecutiveDashboard = () => {
               </svg>
             </div>
           </div>
-
-
-          <div className='flex flex-col space-y-4 pl-4'>
-            <div className='flex flex-row space-x-4'>
-              <div className="flex flex-col bg-white border-2 border-grey-500 rounded-2xl p-2 h-40 w-48 shadow-md">
-                <div className="flex justify-between w-full pb-4">
+          
+          <div className="flex flex-col bg-white justify-between gap-3"
+            style={{ width: '400px', flexShrink: 0 }}>
+              <div className='flex flex-row space-x-4  justify-between gap-1'>
+                {/* Middle-1 */}
+                <div className="flex flex-col bg-white border-2 border-grey-500 rounded-2xl p-2 h-44 w-52 shadow-md">
+                  <div className="flex justify-between w-full pb-4">
                     <span className="text-gray-900 pl-4 text-md">
                       Days to<br />Launch
                     </span>
                     <Info className='w-4 h-4'/>
+                  </div>
+                  <div className='px-4'>
+                    <span style={{fontSize:"33px",fontWeight:"bold"}}>80</span>
+                  </div>
                 </div>
 
-                <div className='px-4'>
-                  <span style={{fontSize:"33px",fontWeight:"bold"}}>80</span>
-                </div>
-              </div>
+                {/* Middle-2 */}
+                <div className="flex flex-col bg-white border-2 border-grey-500 rounded-2xl p-2 h-44 w-52 shadow-md">
+                  <div className="flex justify-between w-full pb-2">
+                      <span className="text-gray-900 pl-4 text-md">
+                        Launch<br />Budget used
+                      </span>
+                      <Info className='w-4 h-4'/>
+                  </div>
 
-              <div className="flex flex-col bg-white border-2 border-grey-500 rounded-2xl p-2 h-40 w-48 shadow-md">
-                <div className="flex justify-between w-full pb-2">
-                    <span className="text-gray-900 pl-4 text-md">
-                      Launch<br />Budget used
-                    </span>
-                    <Info className='w-4 h-4'/>
-                </div>
-
-                <div className='px-4'>
-                  <span style={{fontSize:"33px",fontWeight:"bold"}}>45%</span>
-                </div>
-                <div className="px-4 -mt-4">
-                  <svg width="140" height="40" viewBox="0 0 140 40">
-                    <defs>
-                      <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
-                        <stop offset="0%" stopColor="#22c55e" stopOpacity="0.2" />
-                        <stop offset="100%" stopColor="#22c55e" stopOpacity="0" />
-                      </linearGradient>
-                    </defs>
-                    <path
-                      d="M 0,25 C 10,28 20,22 30,24 S 50,28 60,25 S 80,22 90,24 S 110,28 120,25 S 130,22 140,24"
-                      fill="none"
-                      stroke="#22c55e"
-                      strokeWidth="2"
-                    />
-                    <path
-                      d="M 0,25 C 10,28 20,22 30,24 S 50,28 60,25 S 80,22 90,24 S 110,28 120,25 S 130,22 140,24 L 140,40 L 0,40 Z"
-                      fill="url(#gradient)"
-                    />
-                  </svg>
-                </div>
-
-              </div>
-            </div>
-
-            <div className='flex flex-row space-x-4'>
-              <div className="flex flex-col bg-white border-2 border-grey-500 rounded-2xl p-2 h-40 w-48 shadow-md">
-                <div className="flex justify-between w-full pb-4">
-                    <span className="text-gray-900 pl-4 text-md">
-                      Forecasted<br />Peak sales
-                    </span>
-                    <Info className='w-4 h-4'/>
-                </div>
-
-                <div className='px-4'>
-                  <span style={{fontSize:"33px",fontWeight:"bold"}}>$100M</span>
+                  <div className='px-4'>
+                    <span style={{fontSize:"33px",fontWeight:"bold"}}>45%</span>
+                  </div>
+                  <div className="px-4 -mt-4">
+                    <svg width="140" height="40" viewBox="0 0 140 40">
+                      <defs>
+                        <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+                          <stop offset="0%" stopColor="#22c55e" stopOpacity="0.2" />
+                          <stop offset="100%" stopColor="#22c55e" stopOpacity="0" />
+                        </linearGradient>
+                      </defs>
+                      <path
+                        d="M 0,25 C 10,28 20,22 30,24 S 50,28 60,25 S 80,22 90,24 S 110,28 120,25 S 130,22 140,24"
+                        fill="none"
+                        stroke="#22c55e"
+                        strokeWidth="2"
+                      />
+                      <path
+                        d="M 0,25 C 10,28 20,22 30,24 S 50,28 60,25 S 80,22 90,24 S 110,28 120,25 S 130,22 140,24 L 140,40 L 0,40 Z"
+                        fill="url(#gradient)"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
               
-              <div className="flex flex-col bg-white border-2 border-grey-500 rounded-2xl p-2 h-40 w-48 shadow-md">
-                <div className="flex justify-between w-full pb-4">
-                    <span className="text-gray-900 pl-4 text-md">
-                      Market Share<br />Projection
-                    </span>
-                    <Info className='w-4 h-4'/>
+
+              {/* Middle 3 and 4 */}
+              <div className='flex flex-row space-x-4 justify-between gap-1'>
+                <div className="flex flex-col bg-white border-2 border-grey-500 rounded-2xl p-2 h-44 w-52 shadow-md">
+                  <div className="flex justify-between w-full pb-4">
+                      <span className="text-gray-900 pl-4 text-md">
+                        Forecasted<br />Peak sales
+                      </span>
+                      <Info className='w-4 h-4'/>
+                  </div>
+
+                  <div className='px-4'>
+                    <span style={{fontSize:"33px",fontWeight:"bold"}}>$100M</span>
+                  </div>
                 </div>
 
-                <div className='px-4'>
+                <div className="flex flex-col bg-white border-2 border-grey-500 rounded-2xl p-2 h-44 w-52 shadow-md">
+                  <div className="flex justify-between w-full pb-4">
+                      <span className="text-gray-900 pl-4 text-md">
+                        Market Share<br />Projection
+                      </span>
+                      <Info className='w-4 h-4'/>
+                  </div>
+                  <div className='px-4'>
                   <span style={{fontSize:"33px",fontWeight:"bold"}}>30%</span>
                 </div>
                 <div className="px-4 -mt-4">
@@ -159,18 +162,12 @@ const ExecutiveDashboard = () => {
                     />
                   </svg>
                 </div>
+                </div>
               </div>
-            </div>
           </div>
-
-
-          {/* Third card */}
-
-          <div className='flex pl-6'>
-
-            <div className="flex flex-col bg-white border-2 border-grey-500 rounded-2xl p-2 flex items-center h-80 shadow-md" 
-              style={{ width: '515px' }}>
-                <div className="flex justify-between w-full">
+          <div className="flex flex-col bg-white border-2 border-grey-500 rounded-2xl p-2 items-center h-80 shadow-md"
+            style={{ width: '490px', flexShrink: 0 }}>
+              <div className="flex justify-between w-full">
                   <span className="text-gray-700 pl-4 text-lg">Key Risk and Mitigations</span>
                   <Info className='w-4 h-4'/>
                 </div>
@@ -235,7 +232,6 @@ const ExecutiveDashboard = () => {
                   </div>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </div>
