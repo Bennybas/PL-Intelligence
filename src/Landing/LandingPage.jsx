@@ -53,8 +53,10 @@ const LandingPage = () => {
           onClick={() => navigate(card.path)}
           className={`card-container w-72 h-80 bg-white shadow-lg rounded-sm p-8 cursor-pointer transition-all duration-200 relative
             ${highlightCards && card.shouldHighlight 
-              ? 'ring-4 bg-blue-300 shadow-xl transform scale-105' 
-              : 'hover:shadow-lg'}`}
+              ? 'ring-4 bg-blue-400 shadow-xl transform scale-105' 
+              : 'hover:shadow-lg'}
+              
+              hover:shadow-xlg`}
         >
           <div className="flex items-center justify-center mb-6">
             <div className="bg-gradient-to-br from-[#004567] to-[#c98b27] p-3 rounded-full">
