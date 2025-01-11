@@ -15,7 +15,7 @@ const OverallLaunch = () => {
             </div>
             <div className='flex flex-row justify-between space-x-6'>
             <div className="flex flex-col justify-center items-center ustify-between pt-8">
-              <svg viewBox="-10 -10 220 220" width="210" height="210">
+              <svg viewBox="-10 -10 220 220" width="200" height="200">
                   {/* Grey Circle */}
                   <circle 
                     cx="100" 
@@ -68,18 +68,19 @@ const OverallLaunch = () => {
             <div className="relative h-64">
               <svg className="absolute" width="200" height="200" style={{ top: '45px', left: '-70px' }}>
                 <path 
-                  d="M 10 20 L 105 65 Q 90 90 110 130 L 10 163 Q 70 100 10 20 Z" 
+                  d="M 5 15 L 125 55 L 125 73 L 103 65 Q 90 110 123 140 L 5 160 Q 75 85 5 15 Z" 
                   fill="#d5ded9"
-                  opacity='0.7'
+                  opacity='0.4'
                 />
               </svg>
             </div>
-
+            
+            {/* Q 90 90 110 130 L 10 163 Q 70 100  5 15 Z */}
             
             {/* Second circle */}
 
             <div className="flex flex-col justify-center items-center ustify-between pt-8 -ml-4">
-              <svg viewBox="-10 -10 220 220" width="170" height="170" >
+              <svg viewBox="-10 -10 220 220" width="150" height="150" style={{zIndex: 2 }}>
                   {/* Grey Circle */}
                   <circle 
                     cx="100" 
@@ -98,8 +99,8 @@ const OverallLaunch = () => {
                         ${100 - 80 * Math.cos(2 * Math.PI * (80 / 100))}`}
                     fill="none"
                     stroke="#004567"
-                    strokeWidth={arcWidth + 15} // Increased stroke width for the green progress bar
-                    filter="url(#shadow)" // Add shadow
+                    strokeWidth={arcWidth + 15} 
+                    filter="url(#shadow)" 
                   />
 
                   {/* Percentage text */}
@@ -136,12 +137,12 @@ const OverallLaunch = () => {
                 className="absolute" 
                 width="100" 
                 height="200" 
-                style={{ top: '92px', left: '-42px', zIndex: 1 }} // Set z-index to -1 to ensure it's behind other elements
+                style={{ top: '90px', left: '-42px', zIndex: 1 }} 
               >
                 <path 
-                  d="M 10 20 L 90 20 Q 80 40 90 67 L 10 67 Q 12 65 10 20 Z" 
+                  d="M 5 10 L 90 12 Q 80 40 90 85 L 0 85 Q 25 40 5 10 Z" 
                   fill="#d5ded9"
-                  opacity="0.7"
+                  opacity="0.4"
                 />
               </svg>
             </div>
@@ -151,7 +152,7 @@ const OverallLaunch = () => {
             {/* Third circle */}
 
             <div className="flex flex-col justify-center items-center ustify-between pt-8">
-              <svg  viewBox="-10 -10 220 220" width="170" height="170" style={{zIndex: 2 }}>
+              <svg  viewBox="-10 -10 220 220" width="150" height="150" style={{zIndex: 2 }}>
                   {/* Grey Circle */}
                   <circle 
                     cx="100" 
@@ -207,12 +208,12 @@ const OverallLaunch = () => {
                 className="absolute" 
                 width="100" 
                 height="200" 
-                style={{ top: '92px', left: '-42px' }} // Set z-index to -1 to ensure it's behind other elements
+                style={{ top: '90px', left: '-42px', zIndex: 1 }} 
               >
                 <path 
-                  d="M 10 20 L 90 20 L 90,45 L 70,45  Q72,50 75,67 L 10 67 Q 12 65 10 20 Z" 
+                  d="M 5 10 L 90 12 Q 80 40 90 85 L 0 85 Q 25 40 5 10 Z" 
                   fill="#d5ded9"
-                  opacity="0.7"
+                  opacity="0.4"
                 />
               </svg>
             </div>
@@ -221,7 +222,7 @@ const OverallLaunch = () => {
 
             
             <div className="flex flex-col justify-center items-center ustify-between pt-8">
-              <svg viewBox="-10 -10 220 220" width="170" height="170">
+              <svg viewBox="-10 -10 220 220" width="150" height="150" style={{zIndex: 2 }}>
                   {/* Grey Circle */}
                   <circle 
                     cx="100" 

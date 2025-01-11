@@ -5,7 +5,7 @@ const PayerMarket = () => {
   return (
     <div className='justify-end itemsp-end pl-4 w-full'>
         <div className="flex flex-col bg-white border-2 border-grey-500 rounded-2xl p-2 shadow-md" 
-            style={{ width: '700px', height:'390px' }}>
+            style={{ width: '715px', height:'390px' }}>
             <div className="flex justify-between w-full">
                 <span className="text-gray-700 pl-4 text-lg">Payer and Market Access</span>
                 <Info className='w-4 h-4'/>
@@ -26,7 +26,7 @@ const PayerMarket = () => {
             </div>
 
             <div className="flex flex-col p-4 ml-4 justify-center">
-            <div className="bg-[#edede8] justify-start rounded-md shadow-md flex space-x-6 px-4 py-2 w-[580px]">
+            <div className="bg-[#edede8]/40 justify-start rounded-md shadow-md flex space-x-6 px-4 py-2 w-[580px]">
                 <div className="px-4 ml-4">
                 <span className="text-lg font-bold text-grey-700">US</span>
                 </div>
@@ -34,7 +34,7 @@ const PayerMarket = () => {
             </div>
 
             <div className="flex flex-col p-4 ml-4 justify-center">
-            <div className="bg-[#edede8] justify-start rounded-md shadow-md flex space-x-6 px-4 py-2 w-[580px]">
+            <div className="bg-[#edede8]/40 justify-start rounded-md shadow-md flex space-x-6 px-4 py-2 w-[580px]">
                 <div className="px-4 ml-4">
                 <span className="text-lg font-bold text-grey-700">EU</span>
                 </div>
@@ -42,7 +42,7 @@ const PayerMarket = () => {
             </div>
 
             <div className="flex flex-col p-4 ml-4 justify-center">
-            <div className="bg-[#edede8] justify-start rounded-md shadow-md flex space-x-6 px-4 py-2 w-[580px]">
+            <div className="bg-[#edede8]/40 justify-start rounded-md shadow-md flex space-x-6 px-4 py-2 w-[580px]">
                 <div className="px-4 ml-4">
                 <span className="text-lg font-bold text-grey-700">APAC</span>
                 </div>

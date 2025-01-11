@@ -4,6 +4,10 @@ import { Info } from 'lucide-react';
 import OverallLaunch from './OverallLaunch';
 import PayerMarket from './PayerMarket';
 import KeyRisk from './KeyRisk';
+import KeyDomainReadiness from './KeyDomainReadiness';
+import MarketShare from './MarketShare';
+import Sales from './Sales';
+import BudgetStatus from './BudgetStatus';
 
 const GlobalDashboard = () => {
   
@@ -19,24 +23,7 @@ const GlobalDashboard = () => {
 
           {/* Second Card */}
           <div className='flex pl-6'>
-            <div className="flex flex-col bg-white border-2 border-grey-500 rounded-2xl p-2 flex items-center h-82 shadow-md" 
-              style={{ width: '520px' }}>
-                <div className="flex justify-between w-full">
-                  <span className="text-gray-700 pl-4 text-lg">Budget Status</span>
-                  <Info className='w-4 h-4'/>
-                </div>
-                <div className="flex gap-2 mb-6 w-full justify-end pr-4">
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 rounded-full bg-[#004567]"></div>
-                    <span className="text-gray-600 text-sm">On Track</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 rounded-full bg-[#c98b27]"></div>
-                    <span className="text-gray-600 text-sm">Underutilized</span>
-                  </div>
-                </div>
-
-              </div>
+            <BudgetStatus />
           </div>
         </div>
 
@@ -90,10 +77,23 @@ const GlobalDashboard = () => {
 
           
         </div>
+        
+        {/* Third Row */}
+        <div className='flex pt-4 '>
+          {/* KeyRisk Inidicators */}
+          <KeyRisk />
+          {/* Key DomainReadiness */}
+          <KeyDomainReadiness />
+        </div>
+        
 
-        {/* KeyRisk Inidicators */}
-
-        <KeyRisk />
+        {/* Fourth Row */}
+        <div className='flex pt-4'>
+          {/* Sales */}
+          <Sales />
+          {/* MarketShare */}
+          <MarketShare />
+        </div>
 
 
 
