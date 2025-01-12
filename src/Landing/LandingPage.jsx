@@ -72,7 +72,7 @@ const LandingPage = () => {
             <div className="absolute -bottom-20 -left-40">
               <svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
                 <path
-                  d="M120,10 Q180,20 210,80 L210,150 L120,150 Z"
+                  d="M130,10 Q180,20 210,80 L210,150 L130,150 Z"
                   fill="#004567"
                   opacity="0.7"
                 />

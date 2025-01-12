@@ -141,7 +141,7 @@ const FinancialChart = () => {
               <Tooltip />
             </LineChart>
 
-            <div className="absolute top-0 left-1/2 w-px h-full bg-gray-200"></div>
+            
           </div>
         </>
       ) : (

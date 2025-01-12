@@ -108,6 +108,7 @@ const MarketShare = () => {
           </div>
 
           <LineChart 
+            key={activeRegion}
             width={600} 
             height={250} 
             data={marketData[activeRegion]}
