@@ -59,7 +59,7 @@ const Sales = () => {
         style={{ width: '675px', height: '415px' }}
       >
         <div className="flex justify-between items-center">
-          <span className="text-gray-700 text-lg font-medium">Sales</span>
+          <span className="text-gray-700 pl-4 text-lg">Sales</span>
           <Info className="w-4 h-4 text-gray-500" />
         </div>
 
