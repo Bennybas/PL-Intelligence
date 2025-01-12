@@ -53,7 +53,7 @@ const LandingPage = () => {
           onClick={() => navigate(card.path)}
           className={`card-container w-72 h-80 bg-white shadow-lg rounded-sm p-8 cursor-pointer transition-all duration-200 relative
             ${highlightCards && card.shouldHighlight 
-              ? 'ring-4 bg-blue-400 shadow-xl transform scale-105' 
+              ? 'ring-4 bg-[#3fbefc] shadow-xl transform scale-105' 
               : 'hover:shadow-lg'}
               
               hover:shadow-xlg`}
@@ -72,7 +72,7 @@ const LandingPage = () => {
             <div className="absolute -bottom-20 -left-40">
               <svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
                 <path
-                  d="M120,10 Q180,70 210,80 L210,150 L120,150 Z"
+                  d="M120,10 Q180,20 210,80 L210,150 L120,150 Z"
                   fill="#004567"
                   opacity="0.7"
                 />
@@ -82,12 +82,12 @@ const LandingPage = () => {
 
           {/* Green SVG for the third card */}
           {index === 2 && (
-            <div className="absolute -top-8 -right-16">
+            <div className="absolute -top-8 -right-12">
               <svg width="150" height="150" xmlns="http://www.w3.org/2000/svg">
                 <path
-                  d="M0,0 Q0,100 100,100 L100,0 Z"
+                  d="M0,0 Q0,100 110,100 L110,0 Z"
                   fill="#c98b27"
-                  opacity="0.7"
+                  opacity="0.6"
                 />
               </svg>
             </div>

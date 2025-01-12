@@ -48,17 +48,17 @@ const KeyDomainReadiness = () => {
       );
     };
   return (
-    <div className="pt-6 pl-2">
+    <div className="pt-4 pl-2">
       <div 
-            className="flex flex-col bg-white border-2 border-gray-200 rounded-2xl p-6 shadow-md" 
+            className="flex flex-col bg-white border-2 border-gray-200 rounded-2xl p-2 shadow-md" 
             style={{ width: '750px', height: '390px' }}
         >
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between w-full">
             <span className="text-gray-700 pl-4 text-lg">Key Domain Readiness</span>
-            <Info className="w-4 h-4 text-gray-500" />
+            <Info className="w-4 h-4" />
             </div>
     
-            <div className="flex gap-4 justify-end mt-6 mb-6">
+            <div className="flex gap-4 justify-end mt-6 mb-6 mr-4">
             <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-red-400" />
                 <span className="text-gray-600 text-sm">High</span>
@@ -73,7 +73,7 @@ const KeyDomainReadiness = () => {
             </div>
             </div>
     
-            <div className="flex-grow">
+            <div className="flex-grow px-4">
             <table className="w-full">
                 <thead>
                 <tr>

@@ -59,17 +59,17 @@ const MarketShare = () => {
   const regions = ['US', 'EU', 'APAC'];
 
   return (
-    <div className="pt-6 pl-2">
+    <div className="pt-4 pl-2">
       <div 
-        className="flex flex-col bg-white border-2 border-gray-200 rounded-2xl p-6 shadow-md" 
+        className="flex flex-col bg-white border-2 border-gray-200 rounded-2xl p-4 shadow-md" 
         style={{ width: '675px', height: '415px' }}
       >
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between w-full">
           <span className="text-gray-700 pl-4 text-lg">Market Share</span>
-          <Info className="w-4 h-4 text-gray-500" />
+          <Info className="w-4 h-4" />
         </div>
 
-        <div className="bg-[#edede8] rounded-xl shadow-md w-60 h-8 p-2 mt-4 ml-8">
+        <div className="bg-[#edede8] rounded-xl shadow-md w-60 h-8 p-2 mt-6 ml-8">
             <div className="flex justify-between -mt-2">
                 {regions.map((region) => (
                 <button
@@ -78,7 +78,7 @@ const MarketShare = () => {
                     className={`px-4 py-2 ${
                     activeRegion === region
                         ? 'rounded-xl text-sm font-medium transition-all duration-200 bg-[#c98b27] text-white shadow-md transform scale-105 h-12 -mt-1'
-                        : 'rounded-md text-sm font-medium transition-all duration-200 bg-gray-200 text-gray-700 hover:bg-gray-300 hover:text-black  h-8'
+                        : 'rounded-md text-sm font-medium transition-all duration-200 bg-gray-200 text-gray-700 hover:bg-[#c98b27] hover:text-black  h-8'
                     }`}
                 >
                     {region}

@@ -251,8 +251,10 @@ const ExecutiveDashboard = () => {
             <KeyDomain />
           </div>
         </div>
+        
 
-        <div className='flex pt-12'>
+        {/* Empty space */}
+        <div className='pb-28'>
 
         </div>
       </div>

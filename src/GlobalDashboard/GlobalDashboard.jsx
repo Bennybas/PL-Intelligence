@@ -99,7 +99,7 @@ const GlobalDashboard = () => {
 
         {/* EMPTY SPACE */}
 
-        <div className='flex pt-12'>
+        <div className='pb-28'>
 
         </div>
       </div>

@@ -10,14 +10,14 @@ const BudgetStatus = () => {
     { region: 'EU', value: 40, type: 'on-track' }
   ];
 
-  // Custom label component for bars
+  
   const CustomLabel = (props) => {
     const { x, y, width, value, type } = props;
     const absValue = Math.abs(value);
   
     return (
     <g>
-      {/* MessageSquare icon */}
+      
       <g
         transform={`translate(${type === 'underutilized' ? x - 10 : x + width - 10}, ${y-5})`}
       >
@@ -39,7 +39,7 @@ const BudgetStatus = () => {
           color="white"
           width={40}
           height={40}
-          filter="url(#iconShadow)" // Apply shadow filter
+          filter="url(#iconShadow)" 
         />
       </svg>
 

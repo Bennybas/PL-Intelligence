@@ -91,7 +91,7 @@ const FinancialChart = () => {
             onClick={() => setActiveTab(tab)}
             className={`px-4 py-4 border-2 border-grey-500 rounded-2xl ${
               activeTab === tab 
-                ? 'bg-gradient-to-br from-[#c98b27]/75 to-[#c98b27]/90 text-[#004567] shadow-md' 
+                ? 'bg-gradient-to-br from-[#c98b27]/75 to-[#c98b27]/90 text-[#004567] shadow-md transition-all duration-300 transform scale-105' 
                 : 'bg-gradient-to-br from-[#fcfbf7]/50 to-[#c98b27]/70 text-gray-600 shadow-sm'
             }`}
           >
