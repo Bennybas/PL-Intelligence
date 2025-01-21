@@ -6,16 +6,15 @@ const OverallLaunch = () => {
   const outerRadius = 80;
   const arcWidth = 30;
   return (
-    <div>
-        <div className="flex flex-col bg-white border-2 border-grey-500 rounded-2xl p-2  items-center h-82  shadow-md"
-          style={{flexShrink: 1 }}>
+        <div className="flex flex-col bg-white border-gray-200 border rounded-2xl p-2 items-center h-82 shadow-sm w-full"
+          style={{minWidth:'44rem'}}>
             <div className="flex justify-between w-full">
-              <span className="text-gray-700 pl-4 text-lg">Overall Launch Status</span>
-              <Info className='w-4 h-4'/>
+              <span className="text-gray-700 pl-4 text-md" style={{fontSize:"15px"}}>Overall Launch Status</span>
+              <Info className='w-3 h-3'/>
             </div>
-            <div className='flex flex-row justify-between space-x-6'>
+            <div className='flex flex-row justify-between space-x-2'>
             <div className="flex flex-col justify-center items-center ustify-between pt-8">
-              <svg viewBox="-10 -10 220 220" width="200" height="200">
+              <svg viewBox="-10 -10 220 220" width="180" height="180" style={{zIndex: 2 }}>
                   {/* Grey Circle */}
                   <circle 
                     cx="100" 
@@ -68,7 +67,7 @@ const OverallLaunch = () => {
             <div className="relative h-64">
               <svg className="absolute" width="200" height="200" style={{ top: '45px', left: '-70px' }}>
                 <path 
-                  d="M 5 15 L 125 55 L 125 73 L 103 65 Q 90 110 123 140 L 5 160 Q 75 85 5 15 Z" 
+                  d="M 5 18 L 110 55 L 110 135 L 5 155 Q 75 85 5 18 Z" 
                   fill="#d5ded9"
                   opacity='0.4'
                 />
@@ -80,7 +79,7 @@ const OverallLaunch = () => {
             {/* Second circle */}
 
             <div className="flex flex-col justify-center items-center ustify-between pt-8 -ml-4">
-              <svg viewBox="-10 -10 220 220" width="150" height="150" style={{zIndex: 2 }}>
+              <svg viewBox="-10 -10 220 220" width="130" height="130" style={{zIndex: 2 }}>
                   {/* Grey Circle */}
                   <circle 
                     cx="100" 
@@ -140,7 +139,7 @@ const OverallLaunch = () => {
                 style={{ top: '90px', left: '-42px', zIndex: 1 }} 
               >
                 <path 
-                  d="M 5 10 L 90 12 Q 80 40 90 85 L 0 85 Q 25 40 5 10 Z" 
+                  d="M 5 10 L 80 12 L 80 85 L 0 85 Q 25 40 5 10 Z" 
                   fill="#d5ded9"
                   opacity="0.4"
                 />
@@ -152,7 +151,7 @@ const OverallLaunch = () => {
             {/* Third circle */}
 
             <div className="flex flex-col justify-center items-center ustify-between pt-8">
-              <svg  viewBox="-10 -10 220 220" width="150" height="150" style={{zIndex: 2 }}>
+              <svg  viewBox="-10 -10 220 220" width="130" height="130" style={{zIndex: 2 }}>
                   {/* Grey Circle */}
                   <circle 
                     cx="100" 
@@ -211,7 +210,7 @@ const OverallLaunch = () => {
                 style={{ top: '90px', left: '-42px', zIndex: 1 }} 
               >
                 <path 
-                  d="M 5 10 L 90 12 Q 80 40 90 85 L 0 85 Q 25 40 5 10 Z" 
+                  d="M 5 10 L 80 12 L 80 85 L 0 85 Q 25 40 5 10 Z" 
                   fill="#d5ded9"
                   opacity="0.4"
                 />
@@ -222,7 +221,7 @@ const OverallLaunch = () => {
 
             
             <div className="flex flex-col justify-center items-center ustify-between pt-8">
-              <svg viewBox="-10 -10 220 220" width="150" height="150" style={{zIndex: 2 }}>
+              <svg viewBox="-10 -10 220 220" width="130" height="130" style={{zIndex: 2 }}>
                   {/* Grey Circle */}
                   <circle 
                     cx="100" 
@@ -275,7 +274,6 @@ const OverallLaunch = () => {
             </div>
             
           </div>
-    </div>
   )
 }
 

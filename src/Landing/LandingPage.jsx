@@ -46,7 +46,7 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <div className="flex justify-center space-x-8 mt-6 flex-wrap pt-12">
+    <div className="flex justify-center space-x-8 mt-6 flex-wrap mt-[8rem]">
       {cards.map((card, index) => (
         <div
           key={index}

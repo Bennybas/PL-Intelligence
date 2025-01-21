@@ -59,14 +59,14 @@ const MarketShare = () => {
   const regions = ['US', 'EU', 'APAC'];
 
   return (
-    <div className="pt-4 pl-2">
+    
       <div 
-        className="flex flex-col bg-white border-2 border-gray-200 rounded-2xl p-4 shadow-md" 
-        style={{ width: '675px', height: '415px' }}
+        className="flex flex-col bg-white border border-gray-200 rounded-2xl p-4 shadow-sm w-full" 
+        style={{ height: '370px', minWidth:'full'}}
       >
         <div className="flex justify-between w-full">
-          <span className="text-gray-700 pl-4 text-lg">Market Share</span>
-          <Info className="w-4 h-4" />
+          <span className="text-gray-700 pl-4 text-md" style={{fontSize:'15px'}}>Market Share</span>
+          <Info className="w-3 h-3" />
         </div>
 
         <div className="bg-[#edede8] rounded-xl shadow-md w-60 h-8 p-2 mt-6 ml-8">
@@ -77,9 +77,9 @@ const MarketShare = () => {
                     onClick={() => setActiveRegion(region)}
                     className={`px-4 py-2 ${
                     activeRegion === region
-                        ? 'rounded-xl text-sm font-medium transition-all duration-200 bg-[#c98b27] text-white shadow-md transform scale-105 h-12 -mt-1'
+                        ? 'rounded-xl text-sm font-medium transition-all duration-200 bg-[#c98b27] text-white shadow-md transform scale-105 h-10 -mt-1'
                         : 'rounded-md text-sm font-medium transition-all duration-200 bg-gray-200 text-gray-700 hover:bg-[#c98b27] hover:text-black  h-8'
-                    }`}
+                    }`} style={{fontSize:'12px'}}
                 >
                     {region}
                 </button>
@@ -93,13 +93,13 @@ const MarketShare = () => {
           {lines.map(({ key, color, label }) => (
             <div key={key} className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full" style={{ backgroundColor: color }} />
-              <span className="text-gray-600 text-sm">{label}</span>
+              <span className="text-gray-600 text-sm" style={{fontSize:'12px'}}>{label}</span>
             </div>
           ))}
         </div>
 
         <div className="relative flex-1 w-full mt-4">
-          <div className="absolute left-8 top-0 bottom-0 flex flex-col justify-between text-gray-700 text-sm">
+          <div className="absolute left-8 top-0 bottom-0 flex flex-col justify-between text-gray-700 text-sm" style={{fontSize:'11px'}}>
             <span>$100M</span>
             <span>$50M</span>
             <span>$30M</span>
@@ -109,14 +109,14 @@ const MarketShare = () => {
 
           <LineChart 
             key={activeRegion}
-            width={600} 
-            height={250} 
+            width={550} 
+            height={200} 
             data={marketData[activeRegion]}
             margin={{ top: 5, right: 30, left: 50, bottom: 5 }}
           >
             <XAxis 
               dataKey="date" 
-              tick={{ fontSize: 12, fill: '#666' }} 
+              tick={{ fontSize: 10, fill: '#666' }} 
             />
             <YAxis hide />
             {lines.map(({ key, color }) => (
@@ -135,7 +135,6 @@ const MarketShare = () => {
           
         </div>
       </div>
-    </div>
   );
 };
 

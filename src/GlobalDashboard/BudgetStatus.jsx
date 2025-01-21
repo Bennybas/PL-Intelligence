@@ -5,9 +5,9 @@ import { BarChart, Bar, XAxis, YAxis, ReferenceLine, Cell } from 'recharts';
 const BudgetStatus = () => {
   // Transform data for Recharts
   const data = [
-    { region: 'US', value: 30, type: 'on-track' },
+    { region: 'US', value: 50, type: 'on-track' },
     { region: 'APAC', value: -20, type: 'underutilized' }, // Negative for left side
-    { region: 'EU', value: 40, type: 'on-track' }
+    { region: 'EU', value: 70, type: 'on-track' }
   ];
 
   
@@ -64,29 +64,29 @@ const BudgetStatus = () => {
 
   return (
     <div 
-      className="flex flex-col bg-white border-2 border-grey-500 rounded-2xl p-2 items-center h-82 shadow-md"
-      style={{ width: '520px' }}
+      className="flex flex-col bg-white order-gray-200 border rounded-2xl p-2 items-center h-82 shadow-sm"
+      style={{minWidth:'30rem',width:'30rem'}}
     >
       <div className="flex justify-between w-full">
-        <span className="text-gray-700 pl-4 text-lg">Budget Status</span>
-        <Info className="w-4 h-4"/>
+        <span className="text-gray-700 pl-4 text-md" style={{fontSize:"15px"}}>Budget Status</span>
+        <Info className="w-3 h-3"/>
       </div>
       
       <div className="flex gap-2 mb-6 w-full justify-end pr-4">
         <div className="flex items-center gap-2">
           <div className="w-2 h-2 rounded-full bg-[#c98b27]"></div>
-          <span className="text-gray-600 text-sm">On Track</span>
+          <span className="text-gray-600 text-sm" style={{fontSize:"12px"}}>On Track</span>
         </div>
         <div className="flex items-center gap-2">
           <div className="w-2 h-2 rounded-full bg-[#004567]"></div>
-          <span className="text-gray-600 text-sm">Underutilized</span>
+          <span className="text-gray-600 text-sm" style={{fontSize:"12px"}}>Underutilized</span>
         </div>
       </div>
 
       <div className="w-full px-4">
         <BarChart
-          width={480}
-          height={200}
+          width={420}
+          height={210}
           data={data}
           layout="vertical"
           margin={{ top: 20, right: 30, left: 30, bottom: 5 }}
@@ -96,7 +96,7 @@ const BudgetStatus = () => {
             domain={[-100, 100]}
             ticks={[-100, -90, -60, -30, 0, 30, 60, 90, 100]}
             tickFormatter={(value) => `$${Math.abs(value)}M`}
-            tick={{ fontSize: 12, fill: '#666' }}
+            tick={{ fontSize: 10, fill: '#666' }}
           />
           <YAxis type="category" dataKey="region" hide />
           <ReferenceLine x={0} stroke="#666" />

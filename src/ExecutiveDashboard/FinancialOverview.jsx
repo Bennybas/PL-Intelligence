@@ -83,7 +83,7 @@ const FinancialChart = () => {
   const currentChart = chartData[activeTab];
 
   return (
-    <div className="flex flex-col bg-white border-2 border-grey-500 rounded-2xl p-2 items-center h-82 shadow-md" style={{width:"770px"}}>
+    <div className="flex flex-col bg-white border border-grey-500 rounded-2xl p-2 items-center shadow-sm w-full" style={{ width: '48rem', height: '22rem',minWidth:'48rem' }} >
       <div className="flex gap-4 mb-6 -mt-8">
         {tabs.map((tab) => (
           <button
@@ -93,7 +93,7 @@ const FinancialChart = () => {
               activeTab === tab 
                 ? 'bg-gradient-to-br from-[#c98b27]/75 to-[#c98b27]/90 text-[#004567] shadow-md transition-all duration-300 transform scale-105' 
                 : 'bg-gradient-to-br from-[#fcfbf7]/50 to-[#c98b27]/70 text-gray-600 shadow-sm'
-            }`}
+            }`} style={{fontSize:'13px'}}
           >
             {tab}
           </button>
@@ -101,7 +101,7 @@ const FinancialChart = () => {
       </div>
 
       {currentChart.showMetrics && (
-        <div className="flex gap-4 text-sm text-gray-600 mb-6 -ml-4">
+        <div className="flex gap-4 text-sm text-gray-600 mb-6 -ml-4" style={{fontSize:'12px'}}>
           <span>ROI - 120%</span>
           <span>|</span>
           <span>Breakeven Point - 8 Month</span>
@@ -124,7 +124,7 @@ const FinancialChart = () => {
           </div>
 
           <div className="relative">
-            <div className="absolute left-8 top-0 bottom-0 flex flex-col justify-between text-gray-700 text-md">
+            <div className="absolute left-8 top-0 bottom-0 flex flex-col justify-between text-gray-700 text-md" style={{fontSize:'12px'}}>
               <span>$100M</span>
               <span>$50M</span>
               <span>$30M</span>
@@ -132,11 +132,11 @@ const FinancialChart = () => {
               <span>0</span>
             </div>
 
-            <LineChart width={700} height={300} data={currentChart.data} margin={{ top: 5, right: 30, left: 50, bottom: 5 }}>
-              <XAxis dataKey="date" tick={{ fontSize: 12, fill: '#666' }} />
-              <YAxis hide />
+            <LineChart width={750} height={200} data={currentChart.data} margin={{ top: 5, right: 30, left: 50, bottom: 5 }}>
+              <XAxis dataKey="date" tick={{ fontSize: 10, fill: '#666' }} />
+              <YAxis hide  />
               {currentChart.lines.map(({ key, color }) => (
-                <Line key={key} type="monotone" dataKey={key} stroke={color} strokeWidth={2} dot={false} />
+                <Line key={key} type="monotone" dataKey={key} stroke={color} strokeWidth={2} dot={false}  />
               ))}
               <Tooltip />
             </LineChart>

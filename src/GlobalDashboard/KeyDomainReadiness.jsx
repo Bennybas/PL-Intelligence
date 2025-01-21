@@ -48,38 +48,37 @@ const KeyDomainReadiness = () => {
       );
     };
   return (
-    <div className="pt-4 pl-2">
       <div 
-            className="flex flex-col bg-white border-2 border-gray-200 rounded-2xl p-2 shadow-md" 
-            style={{ width: '750px', height: '390px' }}
+            className="flex flex-col bg-white border border-gray-200 rounded-2xl p-2 shadow-sm w-full" 
+            style={{ height: '350px' }}
         >
             <div className="flex justify-between w-full">
-            <span className="text-gray-700 pl-4 text-lg">Key Domain Readiness</span>
-            <Info className="w-4 h-4" />
+            <span className="text-gray-700 pl-4 text-md"style={{fontSize:"15px"}}>Key Domain Readiness</span>
+            <Info className="w-3 h-3" />
             </div>
     
             <div className="flex gap-4 justify-end mt-6 mb-6 mr-4">
             <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-red-400" />
-                <span className="text-gray-600 text-sm">High</span>
+                <span className="text-gray-600 text-sm" style={{fontSize:"12px"}}>High</span>
             </div>
             <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-yellow-400" />
-                <span className="text-gray-600 text-sm">Medium</span>
+                <span className="text-gray-600 text-sm" style={{fontSize:"12px"}}>Medium</span>
             </div>
             <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-green-500" />
-                <span className="text-gray-600 text-sm">Low</span>
+                <span className="text-gray-600 text-sm" style={{fontSize:"12px"}}>Low</span>
             </div>
             </div>
     
-            <div className="flex-grow px-4">
+            <div className="flex-grow px-4 -mt-4">
             <table className="w-full">
                 <thead>
                 <tr>
                     <th className="text-left p-4 w-1/4 text-gray-600"></th>
                     {regions.map(region => (
-                    <th key={region} className="text-center p-4 w-1/4 text-gray-600">
+                    <th key={region} className="text-center p-4 w-1/4 text-gray-600" style={{fontSize:"13px"}}>
                         {region}
                     </th>
                     ))}
@@ -88,9 +87,9 @@ const KeyDomainReadiness = () => {
                 <tbody>
                 {categories.map(category => (
                     <tr key={category} className="border-t border-gray-200">
-                    <td className="text-sm font-bold text-grey-700 p-1">{category}</td>
+                    <td className="text-sm font-bold text-grey-700" style={{fontSize:"13px"}}>{category}</td>
                     {regions.map(region => (
-                        <td key={`${category}-${region}`} className="p-4">
+                        <td key={`${category}-${region}`} className="p-3">
                         <StatusCircle status={statusData[category][region]} />
                         </td>
                     ))}
@@ -100,7 +99,6 @@ const KeyDomainReadiness = () => {
             </table>
             </div>
         </div>
-    </div>
   )
 }
 
